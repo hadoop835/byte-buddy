@@ -27,6 +27,6 @@ public class AnnotationComparatorTest {
         when(right.annotationType()).thenReturn((Class) String.class);
         assertThat(AnnotationComparator.INSTANCE.compare(left, left) == 0, is(true));
         assertThat(AnnotationComparator.INSTANCE.compare(left, right) < 0, is(true));
-        assertThat(AnnotationComparator.INSTANCE.compare(left, right) > 0, is(true));
+        assertThat(AnnotationComparator.INSTANCE.compare(right, left) > 0, is(true));
     }
 }
